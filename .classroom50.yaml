@@ -1,0 +1,8 @@
+schema: "classroom50/repo-config/v1"
+classroom: "developing-the-interactive-web"
+assignment: "lec-3"
+secret: "coos6z1d"
+owner:
+  username: "grace-5"
+  id: 71181619
+  accepted_at: "2026-09-15T01:41:20Z"
