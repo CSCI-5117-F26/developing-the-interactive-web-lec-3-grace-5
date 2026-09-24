@@ -1,0 +1,16 @@
+<!DOCTYPE html lang="en">
+<html>
+<body>
+    <p>hello from template</p>
+    <ul>
+        {% for name in names%}
+        <li>{{name}}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="/catch" method="post">
+        <input id="name" name="name" placeholder="name">
+        <button type="submit">click</button>
+    </form>
+</body>
+</html>
