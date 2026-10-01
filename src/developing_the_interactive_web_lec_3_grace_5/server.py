@@ -15,7 +15,8 @@ names = []
 
 @app.route("/") # letting the app register itself as the function to call on url /
 def hello_world():
-    return render_template("hello.html")
+    global names
+    return render_template("hello.html", names=names)
     # return "<p>Hello, World!</p>"
 
 @app.route("/catch", methods=["POST"])

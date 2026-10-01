@@ -1,0 +1,19 @@
+<!-- can write it once and then use it across all templates. like an abstract class -->
+
+<!DOCTYPE html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} default {% endblock %}</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+<body>
+    <nav>
+        <!-- obscure flask thing called reverse routing, find url for flask function -->
+        <a href="{{url_for('hello_world')}}">home</a>
+    </nav>
+    <!-- Key aspect of making template have inheritance -->
+    {% block body %} 
+    {% endblock %}
+</body>
+</html>
