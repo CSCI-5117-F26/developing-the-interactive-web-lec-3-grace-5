@@ -1,7 +1,30 @@
-<!DOCTYPE html lang="en">
+<!-- get parent template -->
+{% extends "parent.html" %}
+{% block title %} throw and catch page {% endblock %}
+{% block body %}
+    <strong>hello</strong> from templates
+    {% if names %}
+    <ul>
+        {% for name in names%}
+        <li>{{name}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p> no names yet </p>
+    {% endif %}
+
+    <form action="/catch" method="post">
+        <input id="name" name="name" placeholder="name">
+        <button type="submit">click</button>
+    </form>
+
+{% endblock %}
+<!-- see, much shorter -->
+
+<!-- <!DOCTYPE html lang="en">
 <html>
 <body>
-    <p>hello from template</p>
+    <p><strong>hello</strong> from template</p>
     <ul>
         {% for name in names%}
         <li>{{name}}</li>
@@ -13,4 +36,4 @@
         <button type="submit">click</button>
     </form>
 </body>
-</html>
+</html> -->
